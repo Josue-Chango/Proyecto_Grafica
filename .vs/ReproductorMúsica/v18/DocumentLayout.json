@@ -1,12 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\micha\\OneDrive\\Escritorio\\Computacion Grafica\\2 Parcial\\Proyecto_Reproductor de Musica\\Proyecto_Grafica\\",
+  "WorkspaceRootPath": "C:\\Users\\MATEO\\Documents\\AY\\Grafica\\2doParcial\\Proyecto_Grafica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\BarVisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8F1A3EF8-303D-433F-BF3C-02FA30277E93}|ReproductorM\u00FAsica\\ReproductorM\u00FAsica.csproj|c:\\users\\mateo\\documents\\ay\\grafica\\2doparcial\\proyecto_grafica\\reproductorm\u00FAsica\\circlevisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F1A3EF8-303D-433F-BF3C-02FA30277E93}|ReproductorM\u00FAsica\\ReproductorM\u00FAsica.csproj|solutionrelative:reproductorm\u00FAsica\\circlevisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F1A3EF8-303D-433F-BF3C-02FA30277E93}|ReproductorM\u00FAsica\\ReproductorM\u00FAsica.csproj|c:\\users\\mateo\\documents\\ay\\grafica\\2doparcial\\proyecto_grafica\\reproductorm\u00FAsica\\polygonvisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F1A3EF8-303D-433F-BF3C-02FA30277E93}|ReproductorM\u00FAsica\\ReproductorM\u00FAsica.csproj|solutionrelative:reproductorm\u00FAsica\\polygonvisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F1A3EF8-303D-433F-BF3C-02FA30277E93}|ReproductorM\u00FAsica\\ReproductorM\u00FAsica.csproj|c:\\users\\mateo\\documents\\ay\\grafica\\2doparcial\\proyecto_grafica\\reproductorm\u00FAsica\\audioanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F1A3EF8-303D-433F-BF3C-02FA30277E93}|ReproductorM\u00FAsica\\ReproductorM\u00FAsica.csproj|solutionrelative:reproductorm\u00FAsica\\audioanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\CMediaPlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\BarVisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -22,11 +34,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 284,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PolygonVisualization.cs",
+              "DocumentMoniker": "C:\\Users\\MATEO\\Documents\\AY\\Grafica\\2doParcial\\Proyecto_Grafica\\ReproductorM\u00FAsica\\PolygonVisualization.cs",
+              "RelativeDocumentMoniker": "ReproductorM\u00FAsica\\PolygonVisualization.cs",
+              "ToolTip": "C:\\Users\\MATEO\\Documents\\AY\\Grafica\\2doParcial\\Proyecto_Grafica\\ReproductorM\u00FAsica\\PolygonVisualization.cs",
+              "RelativeToolTip": "ReproductorM\u00FAsica\\PolygonVisualization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T19:44:37.223Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CircleVisualization.cs",
+              "DocumentMoniker": "C:\\Users\\MATEO\\Documents\\AY\\Grafica\\2doParcial\\Proyecto_Grafica\\ReproductorM\u00FAsica\\CircleVisualization.cs",
+              "RelativeDocumentMoniker": "ReproductorM\u00FAsica\\CircleVisualization.cs",
+              "ToolTip": "C:\\Users\\MATEO\\Documents\\AY\\Grafica\\2doParcial\\Proyecto_Grafica\\ReproductorM\u00FAsica\\CircleVisualization.cs",
+              "RelativeToolTip": "ReproductorM\u00FAsica\\CircleVisualization.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAQwLoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T19:43:57.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AudioAnalyzer.cs",
+              "DocumentMoniker": "C:\\Users\\MATEO\\Documents\\AY\\Grafica\\2doParcial\\Proyecto_Grafica\\ReproductorM\u00FAsica\\AudioAnalyzer.cs",
+              "RelativeDocumentMoniker": "ReproductorM\u00FAsica\\AudioAnalyzer.cs",
+              "ToolTip": "C:\\Users\\MATEO\\Documents\\AY\\Grafica\\2doParcial\\Proyecto_Grafica\\ReproductorM\u00FAsica\\AudioAnalyzer.cs",
+              "RelativeToolTip": "ReproductorM\u00FAsica\\AudioAnalyzer.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T19:41:25.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BarVisualization.cs",
               "DocumentMoniker": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\BarVisualization.cs",
               "ToolTip": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\BarVisualization.cs",
@@ -35,17 +90,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CMediaPlayer.cs",
               "DocumentMoniker": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\CMediaPlayer.cs",
               "ToolTip": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\CMediaPlayer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-02T02:43:29.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "frmMusicPlayer.cs",
               "DocumentMoniker": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs",
               "ToolTip": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs",
@@ -54,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "frmMusicPlayer.cs [Dise\u00F1o]",
               "DocumentMoniker": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs",
               "ToolTip": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs [Dise\u00F1o]",
