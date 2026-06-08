@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\GIT\\Proyecto_Grafica\\",
+  "WorkspaceRootPath": "C:\\Users\\micha\\OneDrive\\Escritorio\\Computacion Grafica\\2 Parcial\\Proyecto_Reproductor de Musica\\Proyecto_Grafica\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\BarVisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -29,22 +29,16 @@
               "DocumentIndex": 0,
               "Title": "BarVisualization.cs",
               "DocumentMoniker": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\BarVisualization.cs",
-              "RelativeDocumentMoniker": "..\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\BarVisualization.cs",
               "ToolTip": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\BarVisualization.cs",
-              "RelativeToolTip": "..\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\BarVisualization.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T01:25:04.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T01:25:04.684Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CMediaPlayer.cs",
               "DocumentMoniker": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\CMediaPlayer.cs",
-              "RelativeDocumentMoniker": "..\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\CMediaPlayer.cs",
               "ToolTip": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\CMediaPlayer.cs",
-              "RelativeToolTip": "..\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\CMediaPlayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-02T02:43:29.047Z"
@@ -54,22 +48,16 @@
               "DocumentIndex": 2,
               "Title": "frmMusicPlayer.cs",
               "DocumentMoniker": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs",
-              "RelativeDocumentMoniker": "..\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs",
               "ToolTip": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs",
-              "RelativeToolTip": "..\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs",
-              "ViewState": "AgIAAF0CAAAAAAAAAAAiwIgCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T02:43:29.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T02:43:29.833Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "frmMusicPlayer.cs [Dise\u00F1o]",
               "DocumentMoniker": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs",
-              "RelativeDocumentMoniker": "..\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs",
               "ToolTip": "E:\\GIT\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\Computaci-nGr-fica_ProyectoU1\\ReproductorM\u00FAsica\\ReproductorM\u00FAsica\\frmMusicPlayer.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-02T02:43:29.834Z"
             }
