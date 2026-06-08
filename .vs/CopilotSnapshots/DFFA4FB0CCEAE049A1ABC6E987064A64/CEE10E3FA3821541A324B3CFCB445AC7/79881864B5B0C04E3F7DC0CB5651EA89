@@ -51,13 +51,17 @@
             // 
             // pgProgress
             // 
+            this.pgProgress.Location = new System.Drawing.Point(18, 591);
             this.pgProgress.Name = "pgProgress";
             this.pgProgress.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.pgProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pgProgress.Size = new System.Drawing.Size(1032, 17);
             this.pgProgress.Step = 1;
+            this.pgProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgProgress.TabIndex = 1;
-            this.pgProgress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pgProgress.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pgProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pgProgress.Location = new System.Drawing.Point(10, 10);
+            this.pgProgress.Size = new System.Drawing.Size(1000, 17);
             // 
             // txtFileName
             // 
@@ -66,8 +70,6 @@
             this.txtFileName.Location = new System.Drawing.Point(10, 35);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(600, 21);
-            this.txtFileName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.txtFileName.ForeColor = System.Drawing.Color.White;
             this.txtFileName.TabIndex = 8;
             this.txtFileName.TextChanged += new System.EventHandler(this.txtFileName_TextChanged);
             this.txtFileName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
@@ -97,86 +99,68 @@
             // btnUpload
             // 
             this.btnUpload.Image = ((System.Drawing.Image)(resources.GetObject("btnUpload.Image")));
+            this.btnUpload.Location = new System.Drawing.Point(1010, 30);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(40, 40);
-            this.btnUpload.Margin = new System.Windows.Forms.Padding(6);
+            this.btnUpload.Size = new System.Drawing.Size(57, 50);
             this.btnUpload.TabIndex = 7;
-            this.btnUpload.UseVisualStyleBackColor = false;
-            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.FlatAppearance.BorderSize = 0;
+            this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            this.btnUpload.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // btnReplay
             // 
             this.btnReplay.Image = global::ReproductorMúsica.Properties.Resources.replay;
+            this.btnReplay.Location = new System.Drawing.Point(685, 30);
             this.btnReplay.Name = "btnReplay";
-            this.btnReplay.Size = new System.Drawing.Size(40, 40);
-            this.btnReplay.Margin = new System.Windows.Forms.Padding(6);
+            this.btnReplay.Size = new System.Drawing.Size(45, 38);
             this.btnReplay.TabIndex = 6;
-            this.btnReplay.UseVisualStyleBackColor = false;
-            this.btnReplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.btnReplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReplay.FlatAppearance.BorderSize = 0;
+            this.btnReplay.UseVisualStyleBackColor = true;
             this.btnReplay.Click += new System.EventHandler(this.btnReplay_Click);
-            this.btnReplay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReplay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             // 
             // btnStop
             // 
             this.btnStop.Image = global::ReproductorMúsica.Properties.Resources.stop;
+            this.btnStop.Location = new System.Drawing.Point(360, 30);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(40, 40);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(6);
+            this.btnStop.Size = new System.Drawing.Size(43, 38);
             this.btnStop.TabIndex = 5;
-            this.btnStop.UseVisualStyleBackColor = false;
-            this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.FlatAppearance.BorderSize = 0;
+            this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
-            this.btnStop.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStop.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             // 
             // btnBackward
             // 
             this.btnBackward.Image = global::ReproductorMúsica.Properties.Resources.backward;
+            this.btnBackward.Location = new System.Drawing.Point(410, 30);
             this.btnBackward.Name = "btnBackward";
-            this.btnBackward.Size = new System.Drawing.Size(40, 40);
-            this.btnBackward.Margin = new System.Windows.Forms.Padding(6);
+            this.btnBackward.Size = new System.Drawing.Size(63, 38);
             this.btnBackward.TabIndex = 4;
-            this.btnBackward.UseVisualStyleBackColor = false;
-            this.btnBackward.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.btnBackward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackward.FlatAppearance.BorderSize = 0;
+            this.btnBackward.UseVisualStyleBackColor = true;
             this.btnBackward.Click += new System.EventHandler(this.btnBackward_Click);
-            this.btnBackward.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBackward.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             // 
             // btnForward
             // 
             this.btnForward.Image = global::ReproductorMúsica.Properties.Resources.forward;
+            this.btnForward.Location = new System.Drawing.Point(580, 30);
             this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(40, 40);
-            this.btnForward.Margin = new System.Windows.Forms.Padding(6);
+            this.btnForward.Size = new System.Drawing.Size(63, 38);
             this.btnForward.TabIndex = 3;
-            this.btnForward.UseVisualStyleBackColor = false;
-            this.btnForward.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.btnForward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForward.FlatAppearance.BorderSize = 0;
+            this.btnForward.UseVisualStyleBackColor = true;
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
-            this.btnForward.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnForward.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             // 
             // btnPlayPause
             // 
             this.btnPlayPause.Image = global::ReproductorMúsica.Properties.Resources.pause_play;
+            this.btnPlayPause.Location = new System.Drawing.Point(495, 20);
             this.btnPlayPause.Name = "btnPlayPause";
-            this.btnPlayPause.Size = new System.Drawing.Size(64, 64);
-            this.btnPlayPause.Margin = new System.Windows.Forms.Padding(6);
+            this.btnPlayPause.Size = new System.Drawing.Size(74, 75);
             this.btnPlayPause.TabIndex = 2;
-            this.btnPlayPause.UseVisualStyleBackColor = false;
-            this.btnPlayPause.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.btnPlayPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlayPause.FlatAppearance.BorderSize = 0;
+            this.btnPlayPause.UseVisualStyleBackColor = true;
             this.btnPlayPause.Click += new System.EventHandler(this.btnPlayPause_Click);
-            this.btnPlayPause.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPlayPause.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             // 
             // picCanvas
             // 
@@ -190,94 +174,43 @@
             // btnVolume
             // 
             this.btnVolume.Image = global::ReproductorMúsica.Properties.Resources.volumen;
+            this.btnVolume.Location = new System.Drawing.Point(855, 35);
+            this.btnVolume.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolume.Name = "btnVolume";
-            this.btnVolume.Size = new System.Drawing.Size(40, 40);
-            this.btnVolume.Margin = new System.Windows.Forms.Padding(6);
+            this.btnVolume.Size = new System.Drawing.Size(44, 38);
             this.btnVolume.TabIndex = 11;
-            this.btnVolume.UseVisualStyleBackColor = false;
-            this.btnVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.btnVolume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolume.FlatAppearance.BorderSize = 0;
+            this.btnVolume.UseVisualStyleBackColor = true;
             this.btnVolume.Click += new System.EventHandler(this.btnVolume_Click);
-            this.btnVolume.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVolume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // pnlBottom
             // 
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Height = 130;
-            this.pnlBottom.Size = new System.Drawing.Size(1028, 130);
+            this.pnlBottom.Height = 120;
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.pnlBottom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlBottom.Visible = true;
+            this.pnlBottom.BackColor = System.Drawing.Color.Transparent;
             // 
-            // tlpBottom
-            // 
-            this.tlpBottom = new System.Windows.Forms.TableLayoutPanel();
-            this.tlpBottom.ColumnCount = 5;
-            this.tlpBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tlpBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tlpBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tlpBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpBottom.RowCount = 2;
-            this.tlpBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpBottom.Padding = new System.Windows.Forms.Padding(8);
-
-            // flpControls
-            this.flpControls = new System.Windows.Forms.FlowLayoutPanel();
-            this.flpControls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpControls.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
-            this.flpControls.WrapContents = false;
-            this.flpControls.AutoSize = false;
-            this.flpControls.BackColor = System.Drawing.Color.Transparent;
-
-            // flpRight
-            this.flpRight = new System.Windows.Forms.FlowLayoutPanel();
-            this.flpRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpRight.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
-            this.flpRight.WrapContents = false;
-            this.flpRight.AutoSize = false;
-            this.flpRight.BackColor = System.Drawing.Color.Transparent;
-            this.flpRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Right)));
-
-            // place controls
-            this.tlpBottom.Controls.Add(this.pgProgress, 0, 0);
-            this.tlpBottom.SetColumnSpan(this.pgProgress, 5);
-
-            this.txtFileName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpBottom.Controls.Add(this.txtFileName, 0, 1);
-
-            this.flpControls.Controls.Add(this.btnStop);
-            this.flpControls.Controls.Add(this.btnBackward);
-            this.flpControls.Controls.Add(this.btnPlayPause);
-            this.flpControls.Controls.Add(this.btnForward);
-            this.flpControls.Controls.Add(this.btnReplay);
-            this.tlpBottom.Controls.Add(this.flpControls, 1, 1);
-            this.tlpBottom.SetColumnSpan(this.flpControls, 2);
-
-            this.trbVolume.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tlpBottom.Controls.Add(this.trbVolume, 3, 1);
-
-            this.flpRight.Controls.Add(this.btnVolume);
-            this.flpRight.Controls.Add(this.btnUpload);
-            this.tlpBottom.Controls.Add(this.flpRight, 4, 1);
-
-            this.pnlBottom.Controls.Add(this.tlpBottom);
-
             // frmMusicPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 609);
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(23)))));
-            this.ForeColor = System.Drawing.Color.White;
+            // add controls to bottom panel
+            this.pnlBottom.Controls.Add(this.pgProgress);
+            this.pnlBottom.Controls.Add(this.btnPlayPause);
+            this.pnlBottom.Controls.Add(this.btnForward);
+            this.pnlBottom.Controls.Add(this.btnBackward);
+            this.pnlBottom.Controls.Add(this.btnStop);
+            this.pnlBottom.Controls.Add(this.btnReplay);
+            this.pnlBottom.Controls.Add(this.btnUpload);
+            this.pnlBottom.Controls.Add(this.txtFileName);
+            this.pnlBottom.Controls.Add(this.lblTimer);
+            this.pnlBottom.Controls.Add(this.trbVolume);
+            this.pnlBottom.Controls.Add(this.btnVolume);
+
             // add main controls to form (picCanvas first so panel stays on top)
             this.Controls.Add(this.picCanvas);
             this.Controls.Add(this.pnlBottom);
-            this.pnlBottom.BringToFront();
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMusicPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -308,8 +241,5 @@
         private System.Windows.Forms.TrackBar trbVolume;
         private System.Windows.Forms.Button btnVolume;
         private System.Windows.Forms.Panel pnlBottom;
-        private System.Windows.Forms.TableLayoutPanel tlpBottom;
-        private System.Windows.Forms.FlowLayoutPanel flpControls;
-        private System.Windows.Forms.FlowLayoutPanel flpRight;
     }
 }
