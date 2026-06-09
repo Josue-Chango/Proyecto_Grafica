@@ -58,3 +58,33 @@ C:\Users\micha\OneDrive\Escritorio\Computacion Grafica\2 Parcial\Proyecto_Reprod
 C:\Users\micha\OneDrive\Escritorio\Computacion Grafica\2 Parcial\Proyecto_Reproductor de Musica\Proyecto_Grafica\ReproductorMúsica\obj\Debug\Reproduc.8891C4FC.Up2Date
 C:\Users\micha\OneDrive\Escritorio\Computacion Grafica\2 Parcial\Proyecto_Reproductor de Musica\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.exe
 C:\Users\micha\OneDrive\Escritorio\Computacion Grafica\2 Parcial\Proyecto_Reproductor de Musica\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.pdb
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\ReproductorMúsica.exe.config
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\ReproductorMúsica.exe
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\ReproductorMúsica.pdb
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\MathNet.Numerics.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\Microsoft.Win32.Registry.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.Core.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.WinForms.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.WinMM.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.Security.AccessControl.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.Security.Principal.Windows.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.ValueTuple.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\MathNet.Numerics.xml
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\Microsoft.Win32.Registry.xml
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.Core.xml
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.WinForms.xml
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.WinMM.xml
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.Security.AccessControl.xml
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.Security.Principal.Windows.xml
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.ValueTuple.xml
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.csproj.AssemblyReference.cache
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\Interop.MediaPlayer.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\Interop.WMPLib.dll
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.csproj.ResolveComReference.cache
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.frmMusicPlayer.resources
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.Properties.Resources.resources
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.csproj.GenerateResource.cache
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.csproj.CoreCompileInputs.cache
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\Reproduc.8891C4FC.Up2Date
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.exe
+E:\GIT\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.pdb

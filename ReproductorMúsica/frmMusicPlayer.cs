@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,13 +42,16 @@ namespace ReproductorMúsica
             txtFileName.BackColor = Color.FromArgb(45, 45, 45);
             txtFileName.ForeColor = Color.White;
             trbVolume.BackColor = Color.FromArgb(45, 45, 45);
-            foreach (Button btn in new Button[] { btnPlayPause, btnForward, btnBackward, btnStop, btnReplay, btnUpload, btnVolume })
+            foreach (Button btn in new Button[] { btnPlayPause, btnForward, btnBackward, btnStop, btnReplay, btnUpload, btnVolume, btnStyleBars, btnStyleCircles, btnStylePolygons })
             {
                 btn.BackColor = Color.FromArgb(60, 60, 60);
                 btn.ForeColor = Color.White;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 0;
             }
+
+            // Generar iconos por c�digo GDI+ (sin archivos PNG externos)
+            GenerateButtonIcons();
 
             // NOTE: click events are wired in the Designer; avoid wiring them here to prevent double-invocation
             // NOTE: click events for upload/playpause are wired in the Designer.
@@ -154,7 +158,7 @@ namespace ReproductorMúsica
 
         private void frmMusicPlayer_Load(object sender, EventArgs e)
         {
-
+            HighlightStyleButton(btnStyleBars);
         }
 
         private void EnsurePlayerAndHelper()
@@ -240,6 +244,8 @@ namespace ReproductorMúsica
                         {
                             // use selected visual style when loading
                             mediaHelper.LoadTrack(file, -1);
+                            // Reaplicar el estilo seleccionado por el usuario
+                            mediaHelper.SetStyle(visualStyle);
                             mediaHelper.Play();
                             isPlaying = true;
                         }
@@ -776,6 +782,211 @@ namespace ReproductorMúsica
             {
                 MessageBox.Show("Error al silenciar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        // ============================================================
+        // Botones de selecci�n de estilo visual
+        // ============================================================
+        private void btnStyleBars_Click(object sender, EventArgs e)
+        {
+            visualStyle = 0;
+            if (mediaHelper != null) mediaHelper.SetStyle(0);
+            HighlightStyleButton(btnStyleBars);
+        }
+
+        private void btnStyleCircles_Click(object sender, EventArgs e)
+        {
+            visualStyle = 1;
+            if (mediaHelper != null) mediaHelper.SetStyle(1);
+            HighlightStyleButton(btnStyleCircles);
+        }
+
+        private void btnStylePolygons_Click(object sender, EventArgs e)
+        {
+            visualStyle = 2;
+            if (mediaHelper != null) mediaHelper.SetStyle(2);
+            HighlightStyleButton(btnStylePolygons);
+        }
+
+        private void HighlightStyleButton(Button active)
+        {
+            foreach (Button btn in new Button[] { btnStyleBars, btnStyleCircles, btnStylePolygons })
+            {
+                btn.BackColor = btn == active ? Color.FromArgb(90, 90, 100) : Color.FromArgb(60, 60, 60);
+            }
+        }
+
+        // ============================================================
+        // Generar iconos de botones con GDI+ (sin archivos PNG)
+        // ============================================================
+        private void GenerateButtonIcons()
+        {
+            try { btnStop.Image = MakeStopIcon(40, 40); } catch { }
+            try { btnBackward.Image = MakeBackwardIcon(40, 40); } catch { }
+            try { btnForward.Image = MakeForwardIcon(40, 40); } catch { }
+            try { btnPlayPause.Image = MakePlayPauseIcon(64, 64); } catch { }
+            try { btnReplay.Image = MakeReplayIcon(40, 40); } catch { }
+            try { btnVolume.Image = MakeVolumeIcon(40, 40); } catch { }
+            try { btnUpload.Image = MakeUploadIcon(40, 40); } catch { }
+        }
+
+        private Bitmap MakeStopIcon(int w, int h)
+        {
+            Bitmap bmp = new Bitmap(w, h);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                int s = Math.Min(w, h) / 3;
+                int cx = w / 2, cy = h / 2;
+                using (SolidBrush br = new SolidBrush(Color.FromArgb(255, 80, 80)))
+                    g.FillRectangle(br, cx - s / 2, cy - s / 2, s, s);
+            }
+            return bmp;
+        }
+
+        private Bitmap MakePlayPauseIcon(int w, int h)
+        {
+            Bitmap bmp = new Bitmap(w, h);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                int cx = w / 2, cy = h / 2;
+                int r = Math.Min(w, h) / 3;
+                PointF[] tri = {
+                    new PointF(cx - r * 0.6f, cy - r),
+                    new PointF(cx - r * 0.6f, cy + r),
+                    new PointF(cx + r * 0.8f, cy)
+                };
+                using (SolidBrush br = new SolidBrush(Color.FromArgb(100, 200, 255)))
+                    g.FillPolygon(br, tri);
+            }
+            return bmp;
+        }
+
+        private Bitmap MakeBackwardIcon(int w, int h)
+        {
+            Bitmap bmp = new Bitmap(w, h);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                int cy = h / 2, s = Math.Min(w, h) / 4;
+                // Triangles pointing LEFT (◀◀)
+                PointF[] tri = {
+                    new PointF(w / 2 - s * 0.7f, cy),
+                    new PointF(w / 2 + s * 0.5f, cy - s),
+                    new PointF(w / 2 + s * 0.5f, cy + s)
+                };
+                PointF[] tri2 = {
+                    new PointF(w / 2 - s * 1.7f, cy),
+                    new PointF(w / 2 - s * 0.5f, cy - s),
+                    new PointF(w / 2 - s * 0.5f, cy + s)
+                };
+                using (SolidBrush br = new SolidBrush(Color.FromArgb(255, 200, 80)))
+                {
+                    g.FillPolygon(br, tri);
+                    g.FillPolygon(br, tri2);
+                }
+            }
+            return bmp;
+        }
+
+        private Bitmap MakeForwardIcon(int w, int h)
+        {
+            Bitmap bmp = new Bitmap(w, h);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                int cy = h / 2, s = Math.Min(w, h) / 4;
+                // Triangles pointing RIGHT (▶▶)
+                PointF[] tri = {
+                    new PointF(w / 2 + s * 0.7f, cy),
+                    new PointF(w / 2 - s * 0.5f, cy - s),
+                    new PointF(w / 2 - s * 0.5f, cy + s)
+                };
+                PointF[] tri2 = {
+                    new PointF(w / 2 + s * 1.7f, cy),
+                    new PointF(w / 2 + s * 0.5f, cy - s),
+                    new PointF(w / 2 + s * 0.5f, cy + s)
+                };
+                using (SolidBrush br = new SolidBrush(Color.FromArgb(100, 255, 150)))
+                {
+                    g.FillPolygon(br, tri);
+                    g.FillPolygon(br, tri2);
+                }
+            }
+            return bmp;
+        }
+
+        private Bitmap MakeReplayIcon(int w, int h)
+        {
+            Bitmap bmp = new Bitmap(w, h);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                int cx = w / 2, cy = h / 2, r = Math.Min(w, h) / 3;
+                // Arc from top, clockwise 270° → ends on the left
+                using (Pen p = new Pen(Color.FromArgb(150, 120, 255), 2))
+                {
+                    g.DrawArc(p, cx - r, cy - r, r * 2, r * 2, -90, 270);
+                }
+                // Arrow at the END of the arc (left side, pointing UP to complete the loop)
+                PointF[] arrow = {
+                    new PointF(cx - r, cy - 6),       // tip up
+                    new PointF(cx - r - 5, cy + 2),   // left fin
+                    new PointF(cx - r + 5, cy + 2)    // right fin
+                };
+                using (SolidBrush br = new SolidBrush(Color.FromArgb(150, 120, 255)))
+                    g.FillPolygon(br, arrow);
+            }
+            return bmp;
+        }
+
+        private Bitmap MakeVolumeIcon(int w, int h)
+        {
+            Bitmap bmp = new Bitmap(w, h);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                int cx = w / 2, cy = h / 2;
+                PointF[] speaker = {
+                    new PointF(cx - 6, cy - 4),
+                    new PointF(cx - 2, cy - 4),
+                    new PointF(cx + 3, cy - 8),
+                    new PointF(cx + 3, cy + 8),
+                    new PointF(cx - 2, cy + 4),
+                    new PointF(cx - 6, cy + 4)
+                };
+                using (SolidBrush br = new SolidBrush(Color.FromArgb(200, 200, 200)))
+                    g.FillPolygon(br, speaker);
+                using (Pen p = new Pen(Color.FromArgb(200, 200, 200), 1.5f))
+                {
+                    g.DrawArc(p, cx + 1, cy - 6, 6, 12, -60, 120);
+                }
+            }
+            return bmp;
+        }
+
+        private Bitmap MakeUploadIcon(int w, int h)
+        {
+            Bitmap bmp = new Bitmap(w, h);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                int cx = w / 2, cy = h / 2;
+                PointF[] arrow = {
+                    new PointF(cx, cy - 8),
+                    new PointF(cx - 6, cy - 2),
+                    new PointF(cx + 6, cy - 2)
+                };
+                using (SolidBrush br = new SolidBrush(Color.FromArgb(255, 220, 80)))
+                    g.FillPolygon(br, arrow);
+                using (Pen p = new Pen(Color.FromArgb(255, 220, 80), 2))
+                {
+                    g.DrawLine(p, cx, cy - 8, cx, cy + 6);
+                    g.DrawLine(p, cx - 6, cy + 6, cx + 6, cy + 6);
+                }
+            }
+            return bmp;
         }
 
         private void txtFileName_TextChanged(object sender, EventArgs e)
