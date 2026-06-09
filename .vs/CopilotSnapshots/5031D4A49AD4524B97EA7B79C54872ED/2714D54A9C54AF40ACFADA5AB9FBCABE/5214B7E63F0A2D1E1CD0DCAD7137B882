@@ -1,0 +1,122 @@
+﻿using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+
+namespace ReproductorMúsica
+{
+    // Renderizador de la visualización de tipo "Polígonos" mejorada
+    // Ahora dibuja varias formaciones de polígonos a distintas profundidades
+    // que se escalan y desvanecen simulando que avanzan hacia el espectador.
+    // Cada polígono reacciona a bandas del espectro y al pulso del ritmo.
+    internal class PolygonVisualization
+    {
+        // Dibuja los polígonos en 'capas de profundidad' simulando avance
+        // - offset: contador de animación (marca el progreso hacia el espectador)
+        // - linesToDraw: controla la complejidad/variación (se usa para conteo)
+        // - cx, cy: centro del canvas
+        // - radius: radio máximo disponible
+        // - spectrumSmooth: datos del espectro para deformar los vértices
+        // - beatPulse: pulso rítmico que amplifica la deformación
+        public void Draw(Graphics g, int offset, int linesToDraw, int cx, int cy, int radius, float[] spectrumSmooth, float beatPulse)
+        {
+            if (spectrumSmooth == null || spectrumSmooth.Length == 0) return;
+
+            // Número de 'polígonos en profundidad' (más = efecto de túnel más fuerte)
+            int polyCount = Math.Max(8, 6 + (linesToDraw % 10));
+
+            // Variación de lados base para dar diversidad visual
+            int sidesBase = 4 + (linesToDraw % 7);
+
+            // Promedio de energía para ajustes globales
+            float avg = 0f;
+            for (int i = 0; i < spectrumSmooth.Length; i++) avg += spectrumSmooth[i];
+            avg /= spectrumSmooth.Length;
+
+            // Velocidad de avance: cómo rápido parecen acercarse las capas
+            float speed = 0.035f; // ajustable: mayor => movimiento más rápido hacia el espectador
+
+            // Dibujar de lejos hacia cerca para que las capas cercanas sobreescriban correctamente
+            for (int p = polyCount - 1; p >= 0; p--)
+            {
+                // 'progress' indica qué tan cerca está esta capa del espectador (0 = muy lejos, 1 = muy cerca)
+                float progress = ((offset * speed) + p * (1.0f / polyCount)) % 1.0f;
+
+                // Escala y opacidad según la cercanía (más cerca = más grande y más opaco)
+                float scale = 0.35f + progress * 2.2f; // rango aproximado 0.35..2.55
+                int alpha = ColorUtils.ClampAlpha((int)(40 + progress * 215));
+
+                // Radio efectivo de esta capa
+                float layerRadius = radius * scale * (0.6f + avg * 0.5f + beatPulse * 0.6f);
+
+                // Desplazamiento vertical sutil para simular movimiento de cámara
+                float translateY = (1.0f - progress) * (radius * 0.12f);
+
+                // Número de lados para esta capa (varía ligeramente para diversidad)
+                int sides = sidesBase + (p % 6);
+                if (sides < 3) sides = 3;
+
+                // Construir los puntos del polígono deformados por el espectro
+                PointF[] pts = new PointF[sides];
+                for (int s = 0; s < sides; s++)
+                {
+                    // Rotación dependiente de offset y profundidad para sensación de espiral hacia adelante
+                    double ang = (s * 2.0 * Math.PI / sides) + offset * 0.018 + p * 0.14;
+
+
+                    // Mapear vértice a una banda del espectro (reutiliza toda la gama)
+                    int band = (int)((s / (float)sides) * spectrumSmooth.Length);
+                    band = Math.Min(spectrumSmooth.Length - 1, Math.Max(0, band));
+
+                    // Modificador por energía de la banda y por pulso
+                    float bandVal = spectrumSmooth[band];
+                    float deform = 1.0f + bandVal * (0.5f + p * 0.09f) * (1f + beatPulse * 0.9f);
+
+                    // Aplicar perspectiva: capas cercanas se deforman más y aparecen más grandes
+                    float rx = layerRadius * deform * (float)Math.Cos(ang);
+                    float ry = layerRadius * deform * (float)Math.Sin(ang);
+
+                    // Trasladar según el centro y la profundidad (simula acercamiento)
+                    float px = cx + rx;
+                    float py = cy + ry - translateY * (1.0f - progress);
+
+                    pts[s] = new PointF(px, py);
+                }
+
+                // Color de capa: variación de tono según progreso y offset
+                Color layerColor = ColorUtils.ColorFromHue((int)((progress * 200f + offset * 0.3f) % 360));
+
+                // Dibujar relleno con degradado radial sutil para dar sensación de volumen
+                try
+                {
+                    using (GraphicsPath path = new GraphicsPath())
+                    {
+                        path.AddPolygon(pts);
+
+                        // Crear pen para borde y brush para relleno con transparencia según alpha
+
+                        using (Pen pen = new Pen(Color.FromArgb(Math.Min(255, alpha + 30), 255, 255, 255), Math.Max(1f, 2.0f * progress)))
+                        {
+                            // Relleno: mezcla entre color de capa y negro para profundidad
+                            Color fillA = Color.FromArgb(alpha, layerColor.R, layerColor.G, layerColor.B);
+                            Color fillB = Color.FromArgb((int)(alpha * 0.35f), 0, 0, 0);
+
+                            // Usar LinearGradientBrush aproximado tomando el bounding box del polígono
+                            RectangleF bounds = path.GetBounds();
+                            using (LinearGradientBrush lg = new LinearGradientBrush(bounds, fillA, fillB, (float)((offset + p) % 360)))
+                            {
+                                Blend b = new Blend(3);
+                                b.Positions = new float[] { 0f, 0.6f, 1f };
+                                b.Factors = new float[] { 0.0f, 0.8f, 1f };
+                                lg.Blend = b;
+                                g.FillPath(lg, path);
+                            }
+
+                            g.DrawPath(pen, path);
+                        }
+                    }
+                }
+                catch { }
+            }
+        }
+    }
+}

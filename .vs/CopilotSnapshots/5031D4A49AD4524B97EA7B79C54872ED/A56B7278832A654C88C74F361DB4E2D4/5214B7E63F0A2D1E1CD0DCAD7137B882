@@ -1,0 +1,89 @@
+﻿using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+
+namespace ReproductorMúsica
+{
+    // Renderizador de la visualización de tipo "Polígonos"
+    // Dibuja múltiples capas de polígonos animados donde cada vértice se deforma
+    // según una banda del espectro de audio
+    internal class PolygonVisualization
+    {
+        // Dibuja los polígonos animados
+        // - offset: contador de animación (rota los polígonos y cambia colores)
+        // - linesToDraw: controla el número de lados (aumenta progresivamente)
+        // - cx, cy: centro del canvas
+        // - radius: radio máximo disponible
+        // - spectrumSmooth: datos del espectro para deformar los vértices
+        // - beatPulse: pulso rítmico que amplifica la deformación
+        public void Draw(Graphics g, int offset, int linesToDraw, int cx, int cy, int radius, float[] spectrumSmooth, float beatPulse)
+        {
+            // Número de capas de polígonos superpuestas
+            int layers = 6;
+
+            // Cantidad de lados del polígono base (varía con linesToDraw)
+            int sidesBase = 5 + (linesToDraw % 6);
+
+            // Amplitud promedio para escala general
+            float avg = 0f;
+            for (int i = 0; i < spectrumSmooth.Length; i++) avg += spectrumSmooth[i];
+            avg /= spectrumSmooth.Length;
+
+            // Factor de pulso: amplifica la deformación con el beat
+            float pulse = 1f + beatPulse * 1.0f;
+
+            // Dibujar cada capa (de adentro hacia afuera)
+            for (int layer = 0; layer < layers; layer++)
+            {
+                // Cada capa tiene más lados que la anterior
+                int sides = sidesBase + layer;
+
+                // Radio de esta capa (progresivo, pulsante)
+                float radiusLayer = radius * (0.12f + layer / (float)layers * 0.8f) * pulse;
+
+                // Calcular la posición de cada vértice
+                PointF[] pts = new PointF[sides];
+
+                for (int s = 0; s < sides; s++)
+                {
+                    // Ángulo del vértice (con rotación continua por offset)
+                    double ang = (s * 2.0 * Math.PI / sides) + offset * 0.02 + layer * 0.12;
+
+                    // Cada vértice se deforma según una banda del espectro
+                    // Esto crea la forma orgánica que cambia con la música
+                    int band = (s * spectrumSmooth.Length) / sides;
+                    float mod = 1.0f + spectrumSmooth[band] * (0.4f + layer * 0.12f) * (1f + beatPulse);
+
+                    // Posición final: radio * modificación * ángulo
+                    float rx = radiusLayer * mod * (float)Math.Cos(ang);
+                    float ry = radiusLayer * mod * (float)Math.Sin(ang);
+                    pts[s] = new PointF(cx + rx, cy + ry);
+                }
+
+                // Dibujar el polígono relleno con borde blanco
+                using (GraphicsPath path = new GraphicsPath())
+                {
+                    path.AddPolygon(pts);
+
+                    // Transparencia: capas internas más opacas que las externas
+                    int alpha = Math.Max(30, 220 - layer * 30);
+                    alpha = ColorUtils.ClampAlpha(alpha);
+
+                    // Color vibrante por capa, con rotación de tono HSL (efecto psicodélico)
+                    Color layerColor = ColorUtils.ColorFromHue((layer * 45 + (int)(offset * 0.5)) % 360);
+
+                    using (SolidBrush br = new SolidBrush(Color.FromArgb(alpha, layerColor)))
+                    {
+                        g.FillPath(br, path);
+                    }
+
+                    // Borde blanco semitransparente para definir la forma
+                    using (Pen p = new Pen(Color.FromArgb(230, 255, 255, 255), 1f))
+                    {
+                        g.DrawPath(p, path);
+                    }
+                }
+            }
+        }
+    }
+}
