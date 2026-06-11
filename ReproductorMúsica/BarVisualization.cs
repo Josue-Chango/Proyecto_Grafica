@@ -73,6 +73,32 @@ namespace ReproductorMúsica
                         try { g.FillRectangle(cap, x + 1, canvasHeight - barHeight - capH, Math.Max(1f, barWidth - 2), capH); } catch { }
                     }
                 }
+
+                // --- Barra superior (marco) ---
+                RectangleF rectTop = new RectangleF(x + 1, 0, barWidth - 2, barHeight);
+
+                try
+                {
+                    using (LinearGradientBrush brushTop = new LinearGradientBrush(rectTop, themeEnd, themeStart, LinearGradientMode.Vertical))
+                    {
+                        ColorBlend cb = new ColorBlend(3);
+                        cb.Colors = new Color[] { Color.FromArgb(220, themeStart.R, themeStart.G, themeStart.B), themeEnd, themeStart };
+                        cb.Positions = new float[] { 0f, 0.5f, 1f };
+                        brushTop.InterpolationColors = cb;
+                        g.FillRectangle(brushTop, rectTop);
+                    }
+                }
+                catch { }
+
+                // Cap blanco en la parte inferior de la barra superior
+                using (Brush cap = new SolidBrush(Color.FromArgb(240, 255, 255, 255)))
+                {
+                    float capH = Math.Min(10, barHeight);
+                    if (capH > 0.5f)
+                    {
+                        try { g.FillRectangle(cap, x + 1, barHeight, Math.Max(1f, barWidth - 2), capH); } catch { }
+                    }
+                }
             }
         }
     }

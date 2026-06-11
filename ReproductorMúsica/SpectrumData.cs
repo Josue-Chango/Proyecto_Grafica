@@ -17,7 +17,7 @@ namespace ReproductorMúsica
         private float[] spectrumSmooth;
 
         // Factor de suavizado: 0 = sin suavizar, 1 = completamente suave
-        private float spectrumSmoothing = 0.6f;
+        private float spectrumSmoothing = 0.4f;
 
         private Random rng = new Random();
 
