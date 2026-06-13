@@ -1,12 +1,23 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\micha\\OneDrive\\Escritorio\\Computacion Grafica\\2 Parcial\\Proyecto_Reproductor de Musica\\Proyecto_Grafica\\",
+  "WorkspaceRootPath": "C:\\Users\\micha\\OneDrive\\Escritorio\\Computacion Grafica\\2 Parcial\\Reproductor Musica Final\\Proyecto_Grafica\\",
   "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 284,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
