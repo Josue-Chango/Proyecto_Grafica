@@ -118,3 +118,33 @@ C:\Users\micha\OneDrive\Escritorio\Computacion Grafica\2 Parcial\Reproductor Mus
 C:\Users\micha\OneDrive\Escritorio\Computacion Grafica\2 Parcial\Reproductor Musica Final\Proyecto_Grafica\ReproductorMúsica\obj\Debug\Reproduc.8891C4FC.Up2Date
 C:\Users\micha\OneDrive\Escritorio\Computacion Grafica\2 Parcial\Reproductor Musica Final\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.exe
 C:\Users\micha\OneDrive\Escritorio\Computacion Grafica\2 Parcial\Reproductor Musica Final\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.pdb
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\ReproductorMúsica.exe.config
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\ReproductorMúsica.exe
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\ReproductorMúsica.pdb
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\MathNet.Numerics.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.Core.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.WinForms.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.WinMM.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.ValueTuple.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\MathNet.Numerics.xml
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.Core.xml
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.WinForms.xml
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\NAudio.WinMM.xml
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\bin\Debug\System.ValueTuple.xml
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.csproj.AssemblyReference.cache
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\Interop.WMPLib.dll
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.csproj.ResolveComReference.cache
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.frmMusicPlayer.resources
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.Properties.Resources.resources
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.csproj.GenerateResource.cache
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.csproj.CoreCompileInputs.cache
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\Reproduc.8891C4FC.Up2Date
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.exe
+C:\Users\Josue\Documents\GitHub\Proyecto_Grafica\ReproductorMúsica\obj\Debug\ReproductorMúsica.pdb

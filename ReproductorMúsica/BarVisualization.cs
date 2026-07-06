@@ -65,7 +65,7 @@ namespace ReproductorMúsica
                 catch { }
 
                 // Pequeño borde blanco semitransparente en la parte superior de cada barra
-                using (Brush cap = new SolidBrush(Color.FromArgb(240, 255, 255, 255)))
+                using (Brush cap = new SolidBrush(Color.FromArgb(255, 165, 0, 0)))
                 {
                     float capH = Math.Min(10, barHeight);
                     if (capH > 0.5f)
